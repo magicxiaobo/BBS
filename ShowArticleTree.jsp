@@ -45,7 +45,7 @@ private void tree(Connection conn, int id, int level) {
 <%
 
 	Class.forName("com.mysql.jdbc.Driver");
-	String url = "jdbc:mysql://localhost:3306/bbs?user=root&password=tiger";
+	String url = "jdbc:mysql://localhost/bbs?user=root&password=tiger";
 	Connection conn = DriverManager.getConnection(url);
 	
 	Statement stmt = conn.createStatement();
@@ -74,6 +74,7 @@ private void tree(Connection conn, int id, int level) {
 <table border="1">
 	<%= str %>	
 </table>
+<% str = ""; %>
 </body>
 
 </html>
