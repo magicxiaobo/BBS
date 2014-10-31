@@ -40,7 +40,8 @@ if(rs.next()) {
 			<td><%=rs.getString("cont") %></td>
 		</tr>
 	</table>
-
+	
+	<a href="Reply.jsp?id=<%= rs.getInt("id")%>&rootid=<%= rs.getInt("rootid") %>">Reply</a>
 <%	
 }
 rs.close();
