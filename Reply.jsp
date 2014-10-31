@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=gbk"
     pageEncoding="gbk"%>
     
-<%@ page import="java.sql.*" %>
 
 <% 
 	int id = Integer.parseInt(request.getParameter("id"));
@@ -17,7 +16,7 @@
 </head>
 <body>
 
-<form action="ReplayOK.jsp" method="post">
+<form action="ReplyOK.jsp" method="post">
 	<input type="hidden" name="id" value=<%= id %>>
 	<input type="hidden" name="rootid" value=<%=rootId %>>
 	<table border="1">
