@@ -22,13 +22,13 @@
 	String sql = "insert into article values (null, ?, ?, ?, ?, now(), 0)";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	Statement stmt = conn.createStatement();
-	pstmt.setInt(1, id);
+	pstmt.setInt(1, id);		//用要被回复的post的id作为回复帖子的pid
 	pstmt.setInt(2, rootId);
 	pstmt.setString(3, title);
 	pstmt.setString(4, cont);
 	pstmt.executeUpdate();
 	
-	stmt.executeUpdate("update article set isleaf = 1 where id = " + id);
+	stmt.executeUpdate("update article set isleaf = 1 where id = " + id); //将被回复的post的isleaf设置为1，表明它不再是叶子节点
 	
 	conn.commit();
 	conn.setAutoCommit(true);
