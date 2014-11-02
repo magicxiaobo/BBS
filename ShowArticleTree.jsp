@@ -74,6 +74,7 @@ private void tree(Connection conn, int id, int level) {
 <title>Insert title here</title>
 </head>
 <body>
+<a href="Post.jsp">New Post</a>
 <table border="1">
 	<%= str %>	
 </table>
