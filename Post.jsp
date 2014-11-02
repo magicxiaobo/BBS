@@ -34,7 +34,7 @@
 		rsKey.next();
 		int key = rsKey.getInt(1);
 		rsKey.close();
-		stmt.executeUpdate("update article set rootid = " + key + "where id= " + key);
+		stmt.executeUpdate("update article set rootid = " + key + "where id= " + key);		//只设置新帖子的rootid 
 		 
 		conn.commit();
 		conn.setAutoCommit(true);
@@ -47,19 +47,6 @@
 	}
 %>
     
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk">
-<title>Insert title here</title>
-</head>
-<body>
-<font color="red" size="7">
-	OK!
-</font>
-</body>
-</html>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
