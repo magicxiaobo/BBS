@@ -36,6 +36,14 @@ private void del(Connection conn, int id) {
 %>
 
 <%
+String admin = (String)session.getAttribute("admin");
+if(admin == null || !admin.equals("true")) {
+	out.println("小贼! 别想通过我这关!");
+	return;
+}
+%>
+
+<%
 	int id = Integer.parseInt(request.getParameter("id"));
 	int pid = Integer.parseInt(request.getParameter("pid"));
 	

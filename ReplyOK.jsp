@@ -9,7 +9,26 @@
 	int id = Integer.parseInt(request.getParameter("id"));
 	int rootId = Integer.parseInt(request.getParameter("rootid"));
 	String title = request.getParameter("title");
+	
+	if (title == null) {
+		out.println("error! Please use the bbs in right way!");
+		return;
+	}
+	
+	title = title.trim();
+	
+	if (title.equals("")) {
+		out.println("title could not be empty!");
+		return;
+	}
+	
 	String cont = request.getParameter("cont");
+	
+	cont = cont.trim();
+	if (cont.equals("")) {
+		out.println("content could not be empty!");
+		return;
+	}
 	
 	cont = cont.replaceAll("\n", "<br>");
 	
